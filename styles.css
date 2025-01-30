@@ -5,7 +5,13 @@
 
 body {
     font-family: "Caudex. sans-serif";
-    
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;   
+}
+main {
+    flex: 1;
 }
 h1, h2, nav {
     font-family: "Ubuntu", sans-serif;
@@ -15,9 +21,11 @@ h1 {
     margin-bottom: 30px;
 }
 
-.nav-bar {
+.nav-bar ul {
     display: flex;
     justify-content: space-around;
+    list-style-type: none;
+    width: 100%;
 }
 
 .nav-item {
@@ -37,6 +45,7 @@ h1 {
     text-decoration: underline;
     font-size: x-large;
 }
+
 
 /*home-page*/
 .bio-section {
@@ -58,13 +67,13 @@ h1 {
 }
 
 /*Collaborations-page*/
-ul {
+main ul {
     list-style-type: none;    
 }
-ul li {
+main ul li {
     margin: 10px auto;
 }
-li a {
+main li a {
     text-decoration: none;
     font-size: larger;
     font-family: "Ubuntu", sans-serif;
@@ -82,14 +91,18 @@ li a {
 .image-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: 600px;
+    
     gap: 0px;
+    
 }
 figure {
-    margin: 8px 5px;
+    width: 90%; /*Make the figure take up ...% column width*/
+    /*margin: 8px 5px;*/
+    text-align: center;
 }
 .image {
-    width: 300px; 
+    width: 100%; /*Scale image to fit column width*/ 
+    height: auto;
     aspect-ratio: 3 / 2;
     object-fit: cover;
     border: solid #A64F3C 7px;
@@ -132,4 +145,8 @@ textarea {
 button {
     width: 60px;
     margin: 0 auto;
+}
+
+footer {
+   
 }
